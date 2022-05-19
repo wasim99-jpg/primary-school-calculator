@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardano | Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cardano | Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+<script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+
+
+    <script>
+        function calc()
+        {
+            var a=parseInt(document.getElementById('input1').value);
+            var b=parseInt(document.getElementById('input2').value);
+            var c=document.getElementById('choice').value;
+
+            document.getElementById("remainder").value = "";
+
+            if (c=="add"){
+                document.getElementById('result').value= a + b;
+            }
+            else if (c=="sub"){
+                if( (a - b) >= 0) 
+                {
+                    document.getElementById('result').value= a - b;
+                }
+                else
+                {
+                    alert("Negative Result");
+                }
+            }
+            else if (c=="mul"){
+                document.getElementById('result').value= a * b;
+            }
+            else {
+                document.getElementById('result').value= parseInt(a / b);
+                    if( (a%b == 0))
+                    {
+                        document.getElementById('remainder').value= 0 ;
+                    }
+                    else
+                    {
+                        document.getElementById('remainder').value= a % b;
+                    }
+                
+            }
+        }   
+
+
+        function info()
+        {
+            var a=document.getElementById('fullname').value;
+            var b=document.getElementById('program').value;
+            var c=document.getElementById('gender').value;
+            var d=document.getElementById('state').value;
+            var e=document.getElementById('age').value;
+
+            document.getElementById('_fullname').value = a;
+            document.getElementById('_program').value = b;
+            document.getElementById('_gender').value = c;
+            document.getElementById('_state').value = d;
+            document.getElementById('_age').value = e;
+        }
+    </script>
+<center><h2>Cardano Calculator</h2>
+
+<style>
+
+        body 
+        {
+            font-family: 'Lobster', cursive;
+            font-family: 'Zen Kurenaido', sans-serif;
+            font-size: 25px;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FBF8F1;
+            padding-bottom: 50px;
+        }
+
+        .big-container
+        {
+            width: 400px;
+            border-radius: 6px;
+            box-shadow: 5px 7px #7C99AC;
+        }
+
+        .big-container
+        {
+            background: #F7ECDE;
+        }
+
+        .small-container
+        {
+            background: #F7ECDE;
+        }
+
+        .title-text
+        {
+            color: #470D21;
+            background:#54BAB9 ;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 10px;
+            box-shadow: 0px 7px #E9DAC1;
+        }
+
+
+        .small-1-container, .small-2-container, .small-3-container,.small-5-container
+        {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .small-1-container
+        {
+            background: #F7ECDE;
+            
+        }
+
+        .small-2-container
+        {
+            background: #F7ECDE;
+            
+
+        }
+
+        .small-4-container
+        {
+            width: 390px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .result-container ,.remainder-container
+        {
+            float: left;
+            padding: 0 10px 10px 20px;
+            width: auto;
+        }
+
+
+        select option
+        {
+            background: E9DAC1;
+            font-family: 'Lobster', cursive;
+            font-family: 'Zen Kurenaido', sans-serif;
+            text-align: center;
+
+        }
+
+        select
+        {
+            width: auto;
+            text-align: center;
+            border-radius: 3px;
+            padding: 5px;
+            font-size: 17px;
+            font-family: 'Lobster', cursive;
+            font-family: 'Zen Kurenaido', sans-serif;
+            font-weight: bold;
+        }
+
+
+        input
+        {
+            border-radius: 4px;
+            padding: 5px;
+            font-family: 'Lobster', cursive;
+            font-family: 'Zen Kurenaido', sans-serif;
+            font-size: 13px;
+            text-align: center;
+            font-weight: bold;
+            width: 50px;
+        }
+
+        .button
+        {
+            border-radius: 4px;
+            padding: 5px;
+            font-family: 'Lobster', cursive;
+            font-family: 'Zen Kurenaido', sans-serif;
+            font-size: 21px;
+            text-align: center;
+            font-weight: bold;
+            width: auto;
+            transition: .3s ease-in-out;
+            border: 2px solid #54BAB9;
+        }
+
+        .button:hover
+        {
+            cursor: pointer;
+            transition: .2s ease-in-out;
+            background: #54BAB9;
+            opacity: 80%;
+            color: white;
+        }
+
+        .back-button
+        {
+            font-size: 24px;
+            border: 1px solid black;
+            margin-top: 30px;
+            width: auto; 
+            margin-right: 80%;
+            border-radius: 3px;
+            background-color: none;
+            transition: all .2s ease-in-out;
+            
+        }
+        .back-button a 
+        {
+            text-decoration: none;
+            color: black;
+            transition: all .2s ease-in-out;
+            width: auto;
+            padding: 0 16px;
+            border: 1px solid transparent;
+        }
+
+        .back-button:hover, .back-button a:hover
+        {
+
+            background-color: #54BAB9;
+            color: white;
+            border: 1px solid transparent;
+            
+        }
+
+
+
+
+</style>    
+<body>
+    <h3>Year Three Calculator</h3>
+    <div class = "big-container">
+        <table>
+        <!----- Calculation------------------------------------------------->
+        <tr>
+         <p style="font-weight: bold; " class="title-text">Enter 2 numbers</p>
+        <td class="small-container">
+            <div class="small-1-container">
+                First number
+                <br><input type="text" maxlength="5" id="input1" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" name="itemConsumption"><br>
+            </div>
+
+            <div class="small-3-container">
+                <select id="choice">
+                    <option value="add" id="add">+</option>
+                    <option value="sub" id="sub">-</option>
+                    <option value="mul" id="mul">X</option>
+                    <option value="div" id="div">/</option>
+                </select> <br>
+                
+            </div>
+
+            <div class="small-2-container">
+                Second number
+                <br><input type="text" maxlength="5" id="input2" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" name="itemConsumption"><br>
+            </div>
+
+            <div class="small-5-container">
+                <button onclick="window.location.href='year3.html'" class="button">Reset</button>
+                <button onclick="calc()" class="button">Calculate</button>
+            </div>
+            
+
+            <div class="small-4-container">
+                <div class="result-container">
+                    Result: <br>
+                    <input type="text" id=result readonly="readonly">
+                </div>
+                <div class="remainder-container">
+                    Remainder: <br>
+                    <input type="text" id=remainder readonly="readonly">
+                </div>
+            </div>
+
+        </td>
+        </tr>
+        </table>
+    </div>
+
+    <div class = "back-button">
+        <a href="homecalculator.html">Back</a>
+    </div>
+
+<script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d59a5c7bdc64cbf',m:'szaHz.7UeyFiIk9fbzJ3DtEuI2PQ8yqk.O7u0hdkPn8-1643534670-0-AZBGOBpQ3jkC533ZZawyHvAqHuFur67TWBan8p4GyZo4G2mnlH4V6s/CseEdXzF43B0wpUbao6Nh6Na3+570tggJByvpA8fJCAm9x1QgjnMN4Xomtlnrjv66c+2hGg3LQyJ5w3BcaDQ5oL4ISm4UkfB46yqSadAn5Mwmw5jWoU8pHPh1B/sEPju+6mOe6VY3d7itVHkAcF4wmPVA6prOKgo=',s:[0xb840ed32f0,0xabcdc5481b],}})();</script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d6484fe8ebad9e4',m:'6yv4GAjIHl80fuMcpMRKAAxGv3dn3I1KhDhmG6.j5K4-1643648670-0-ARBLCd0mjvvlch3DmSo/v1L4fiM8tglZDonWbPECbc+p21W23cNj0Zls4PnvAfcKFpFI5gxDqhACFEf0Qn0IkTh+qv70AVKzmhRB5C8Q/2Wgp64+SEucBlX4gfhWn2RosQXoCKk+OXhcG2iLQV/Q8Bz+JX7LUdRnnEd16NHEvsWt321wqLPGwiCJWC22wYvtN+5fD5TBxzpjkn4qnjZPPbJf2OXIKB0CuONIcx615CBX',s:[0xbe6405bf74,0x60ab50310e],}})();</script><script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d8a3f12b86b4655',m:'HzN9KmidVwA07X1JtaX1_e2DVeuJcXEYMneSAU_5RRU-1644044265-0-AWXXyw9kNwxwGjxzc2QNh2+7StPP7imIHkYA5QYLO0jFsk89XhisNNC/7voDYGjUEa2p35tt6CUdRd7+tDyaIrlChjd+7XmeN2nClUzwWBUYYiSMDrLaP5CoP7q5YoQiIY+QBcwDUa9bXiGEFJlofHDqaF2Rc/3DJSHhfhXhsNN8wYBcxaWsYEqjkECVIlaYS7DI+jxs0dAHESfVXFh+g1c=',s:[0xfae4bc11fe,0x4e5a066190],}})();</script></body>
+</html>
